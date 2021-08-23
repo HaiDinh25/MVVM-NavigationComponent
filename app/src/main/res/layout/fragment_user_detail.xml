@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.haidv.userlisttest.userdetail.data.UserDetail" />
+
+        <variable
+            name="userDetail"
+            type="UserDetail" />
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/distance_200dp"
+                    android:background="@drawable/bg_back_ground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_avatar"
+                    android:padding="@dimen/distance_4dp"
+                    app:layout_constraintBottom_toTopOf="@id/layoutInfo"
+                    app:layout_constraintEnd_toEndOf="@id/backGround"
+                    app:layout_constraintStart_toStartOf="@id/backGround">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imageAvatar"
+                        android:layout_width="@dimen/distance_100dp"
+                        android:layout_height="@dimen/distance_100dp"
+                        android:src="@drawable/ic_launcher_background" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/distance_16dp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/distance_10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/backGround">
+
+                    <TextView
+                        style="@style/TextViewBoldWrapContent"
+                        android:text="@{userDetail.name}"
+                        android:textSize="@dimen/text_size_20sp" />
+
+                    <TextView
+                        style="@style/TextViewBoldWrapContent"
+                        android:text="@{userDetail.location}"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="@dimen/distance_20dp"
+                        android:layout_marginTop="@dimen/distance_20dp"
+                        android:layout_marginEnd="@dimen/distance_20dp"
+                        android:background="@color/cardview_shadow_start_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/distance_20dp">
+
+                        <LinearLayout style="@style/ViewWeight_1">
+
+                            <TextView
+                                style="@style/TextViewBoldWrapContent"
+                                android:text="@{String.valueOf(userDetail.followers)}"
+                                android:textSize="@dimen/text_size_20sp" />
+
+                            <TextView
+                                style="@style/TextViewBoldWrapContent"
+                                android:text="@string/user_detail_followers"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/ViewWeight_1">
+
+                            <TextView
+                                style="@style/TextViewBoldWrapContent"
+                                android:text="@{String.valueOf(userDetail.following)}"
+                                android:textSize="@dimen/text_size_20sp" />
+
+                            <TextView
+                                style="@style/TextViewBoldWrapContent"
+                                android:text="@string/user_detail_following"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout style="@style/ViewWeight_1">
+
+                            <TextView
+                                style="@style/TextViewBoldWrapContent"
+                                android:text="@{String.valueOf(userDetail.public_repos)}"
+                                android:textSize="@dimen/text_size_20sp" />
+
+                            <TextView
+                                style="@style/TextViewBoldWrapContent"
+                                android:text="@string/user_detail_repos"
+                                android:textSize="@dimen/text_size_16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/cardview_shadow_start_color" />
+
+                    <LinearLayout
+                        style="@style/ViewWeight_1"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/distance_20dp">
+
+                        <TextView
+                            style="@style/TextViewBoldWrapContent"
+                            android:layout_gravity="start"
+                            android:text="@string/user_detail_bio"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/distance_4dp"
+                            android:text="@{userDetail.bio}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </FrameLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</layout>

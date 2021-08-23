@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_20dp"
+        android:layout_marginEnd="@dimen/distance_20dp"
+        android:background="@drawable/bg_border_dialog"
+        android:padding="@dimen/distance_20dp">
+
+        <TextView
+            android:id="@+id/textViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/buttonOk"
+            style="@style/TextViewBoldWrapContent"
+            android:layout_width="match_parent"
+            android:layout_below="@id/textViewContent"
+            android:layout_marginTop="@dimen/distance_20dp"
+            android:background="@drawable/bg_button_ok"
+            android:foreground="?android:selectableItemBackground"
+            android:text="OK" />
+
+    </RelativeLayout>
+
+</layout>

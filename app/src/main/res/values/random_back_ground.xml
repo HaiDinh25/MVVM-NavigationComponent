@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="BackGroundList">
+        <item>@drawable/bg_back_ground</item>
+        <item>@drawable/bg_back_ground_1</item>
+        <item>@drawable/bg_back_ground_2</item>
+        <item>@drawable/bg_back_ground_3</item>
+        <item>@drawable/bg_back_ground_4</item>
+    </array>
+
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UserList</string>
+
+    <!--User list-->
+    <string name="user_list_title">User list</string>
+
+    <!--User detail-->
+    <string name="user_detail_title">Profile</string>
+    <string name="user_detail_followers">Followers</string>
+    <string name="user_detail_following">Following</string>
+    <string name="user_detail_repos">Repos</string>
+    <string name="user_detail_bio">Bio</string>
+
+</resources>

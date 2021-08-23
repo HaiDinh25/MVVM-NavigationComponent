@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.haidv.userlisttest.user.data.User" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/layoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageAvatar"
+            android:layout_width="@dimen/distance_50dp"
+            android:layout_height="@dimen/distance_50dp"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:id="@+id/layoutUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/distance_8dp"
+            android:layout_toEndOf="@id/imageAvatar"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextViewBoldWrapContent"
+                android:layout_width="match_parent"
+                android:text="@{user.login}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{user.html_url}" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

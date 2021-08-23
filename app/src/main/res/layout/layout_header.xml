@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewHeader"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize">
+
+    <TextView
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/distance_20dp"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/TextViewBoldWrapContent"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="@string/user_list_title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_20sp" />
+
+</RelativeLayout>
